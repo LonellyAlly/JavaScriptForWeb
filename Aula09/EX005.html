@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos em DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos em DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Mensagem</div>
+    <div class="teste">TESTE askj</div>
+    <script>
+        var corpo = window.document.body //transforma um elemento do HTML em um objeto em JS
+        var p1 = window.document.getElementsByTagName('p')[0]//Recruta a variável do html por nome do elemento
+        var p2 = window.document.getElementsByTagName('p')[1]//! ! ! ! ! ! ! ! ! ! ! ! !  por nome do elemento
+        document.write(p1.innerText) //sem formatação do HTML, apenas o texto do documento, nesse caso o negrito
+        document.write(p1.innerHTML) //com formatação do HTML
+        corpo.style.background = 'Pink' //selecionei o fundo do site para modificar sua cor  
+        p1.style.color = 'white' //seleciono as propriedades do meu site para modifica-las
+        //var d = window.document.getElementById('msg')
+        //d.innerText = 'estou aguardando...'
+        var d = window.document.querySelector('div.msg')
+        var e = window.document.querySelector('div.teste')
+        var d = window.document.querySelector('div#msg') //para id usar #
+        var d = window.document.querySelector('div.msg') //para class usar .
+        d.style.color='white'
+    </script>
+</body>
+</html>
